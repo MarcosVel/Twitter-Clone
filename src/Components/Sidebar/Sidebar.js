@@ -11,9 +11,11 @@ import SidebarOption from '../SidebarOption/SidebarOption';
 function Sidebar() {
   return (
     <div className="sidebar">
+      {/* Twitter Icon */}
+      <AiOutlineTwitter size='25' />
+
       {/* SidebarOption */}
-      <SidebarOption Icon ={AiOutlineTwitter} text='' />
-      <SidebarOption Icon ={BiHomeCircle} text='Página Inicial' />
+      <SidebarOption active Icon ={BiHomeCircle} text='Página Inicial' />
       <SidebarOption Icon ={BiHash} text='Explorar' />
       <SidebarOption Icon ={IoNotificationsOutline} text='Notificações' />
       <SidebarOption Icon ={ FiMail } text='Mensagens' />
