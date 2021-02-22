@@ -7,12 +7,13 @@ import { RiFileList2Line } from "react-icons/ri";
 import { BsPerson } from "react-icons/bs";
 import { CgMoreO } from "react-icons/cg";
 import SidebarOption from '../SidebarOption/SidebarOption';
+import { Button } from '@material-ui/core';
 
 function Sidebar() {
   return (
     <div className="sidebar">
       {/* Twitter Icon */}
-      <AiOutlineTwitter size='25' />
+      <AiOutlineTwitter size='35' />
 
       {/* SidebarOption */}
       <SidebarOption active Icon ={BiHomeCircle} text='Página Inicial' />
@@ -23,6 +24,14 @@ function Sidebar() {
       <SidebarOption Icon ={ RiFileList2Line } text='Listas' />
       <SidebarOption Icon ={ BsPerson } text='Perfil' />
       <SidebarOption Icon ={ CgMoreO } text='Mais' />
+
+      <Button 
+        variant='outlined' 
+        className='sidebar__tweet' 
+        fullWidth
+        >
+        Tweetar
+      </Button>
 
     </div>
   )
