@@ -1,12 +1,27 @@
 import './Sidebar.css';
-import { BiHomeCircle } from "react-icons/bi";
+import { BiHomeCircle, BiHash, BiBookmark } from "react-icons/bi";
 import { AiOutlineTwitter } from "react-icons/ai";
+import { IoNotificationsOutline } from "react-icons/io5";
+import { FiMail } from "react-icons/fi";
+import { RiFileList2Line } from "react-icons/ri";
+import { BsPerson } from "react-icons/bs";
+import { CgMoreO } from "react-icons/cg";
+import SidebarOption from '../SidebarOption/SidebarOption';
 
 function Sidebar() {
   return (
     <div className="sidebar">
-      <BiHomeCircle size='25' />
-      <AiOutlineTwitter size='25' />
+      {/* SidebarOption */}
+      <SidebarOption Icon ={AiOutlineTwitter} text='' />
+      <SidebarOption Icon ={BiHomeCircle} text='Página Inicial' />
+      <SidebarOption Icon ={BiHash} text='Explorar' />
+      <SidebarOption Icon ={IoNotificationsOutline} text='Notificações' />
+      <SidebarOption Icon ={ FiMail } text='Mensagens' />
+      <SidebarOption Icon ={ BiBookmark } text='Itens salvos' />
+      <SidebarOption Icon ={ RiFileList2Line } text='Listas' />
+      <SidebarOption Icon ={ BsPerson } text='Perfil' />
+      <SidebarOption Icon ={ CgMoreO } text='Mais' />
+
     </div>
   )
 }
