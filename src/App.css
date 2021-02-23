@@ -7,7 +7,16 @@ body {
   --twitter-dark: #1da1f2;
   --twitter-dark-hover: rgba(29, 161, 242, 0.1);
   --background-dark: #15202B;
+  --lines-dark: #38444d;
 
   background-color: var(--background-dark);
+  color: white;
+}
+
+.app {
+  display: flex;
+}
+
+a {
   color: white;
 }
