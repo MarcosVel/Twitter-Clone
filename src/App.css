@@ -9,6 +9,9 @@ body {
   --background-dark: #15202B;
   --lines-dark: #38444d;
 
+  /* PLACEHOLDER */
+  --placeholder-color: #8899A6;
+
   background-color: var(--background-dark);
   color: white;
 }

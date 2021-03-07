@@ -1,0 +1,50 @@
+.tweetBox {
+  padding: 8px 16px;
+}
+
+.tweetBox > form {
+  display: flex;
+  flex-direction: column;
+}
+
+.tweetBox_input {
+  display: flex;
+}
+
+.tweetBox_input > input {
+  flex: 1;
+  margin-left: 20px;
+  border: none;
+  outline-style: none;
+
+  font-family: inherit;
+  font-size: 19px;
+  font-weight: 400;
+  color: white;
+  overflow-wrap: break-word;
+
+  background-color: inherit;
+}
+
+.tweetBox_input > input::-webkit-input-placeholder {
+  color: var(--placeholder-color);
+}
+
+.tweetBox_input > input:-moz-placeholder { /* Firefox 18- */
+  color: var(--placeholder-color);
+}
+
+.tweetBox_input > input::-moz-placeholder {  /* Firefox 19+ */
+  color: var(--placeholder-color);
+}
+
+.tweetBox_input > input:-ms-input-placeholder {  
+  color: var(--placeholder-color);
+}
+
+.separator {
+  height: 12px;
+  background-color: #192734;
+  border-top: 1px solid #38444d;
+  border-bottom: 1px solid #38444d;
+}

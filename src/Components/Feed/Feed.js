@@ -1,5 +1,6 @@
 import './Feed.css';
 import { WiStars } from "react-icons/wi";
+import TweetBox from '../TweetBox/TweetBox';
 
 function Feed() {
   return (
@@ -11,58 +12,8 @@ function Feed() {
       </div>
 
       {/* TweetBox */}
-      <h2>ABC</h2>
-      <h2>ABC</h2>
-      <h2>ABC</h2>
-      <h2>ABC</h2>
-      <h2>ABC</h2>
-      <h2>ABC</h2>
-      <h2>ABC</h2>
-      <h2>ABC</h2>
-      <h2>ABC</h2>
-      <h2>ABC</h2>
-      <h2>ABC</h2>
-      <h2>ABC</h2>
-      <h2>ABC</h2>
-      <h2>ABC</h2>
-      <h2>ABC</h2>
-      <h2>ABC</h2>
-      <h2>ABC</h2>
-      <h2>ABC</h2>
-      <h2>ABC</h2>
-      <h2>ABC</h2>
-      <h2>ABC</h2>
-      <h2>ABC</h2>
-      <h2>ABC</h2>
-      <h2>ABC</h2>
-      <h2>ABC</h2>
-      <h2>ABC</h2>
-      <h2>ABC</h2>
-      <h2>ABC</h2>
-      <h2>ABC</h2>
-      <h2>ABC</h2>
-      <h2>ABC</h2>
-      <h2>ABC</h2>
-      <h2>ABC</h2>
-      <h2>ABC</h2>
-      <h2>ABC</h2>
-      <h2>ABC</h2>
-      <h2>ABC</h2>
-      <h2>ABC</h2>
-      <h2>ABC</h2>
-      <h2>ABC</h2>
-      <h2>ABC</h2>
-      <h2>ABC</h2>
-      <h2>ABC</h2>
-      <h2>ABC</h2>
-      <h2>ABC</h2>
-      <h2>ABC</h2>
-      <h2>ABC</h2>
-      <h2>ABC</h2>
-      <h2>ABC</h2>
-      <h2>ABC</h2>
-      <h2>ABC</h2>
-      <h2>ABC</h2>
+      <TweetBox />
+      
       {/* Posts */}
     </div>
   )
