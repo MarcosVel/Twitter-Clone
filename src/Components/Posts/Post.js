@@ -27,6 +27,8 @@ function Post({
             </div>
           </div>
           <img src='https://pbs.twimg.com/media/Ev-jiMUWEAgLO5Y?format=jpg&name=medium' alt='noia' />
+          <div className='post_footer'>
+          </div>
         </div>
       </div>
     </section>
