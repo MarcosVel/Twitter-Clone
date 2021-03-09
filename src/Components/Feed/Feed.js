@@ -1,10 +1,11 @@
 import './Feed.css';
 import { WiStars } from "react-icons/wi";
 import TweetBox from '../TweetBox/TweetBox';
+import Post from '../Posts/Post';
 
 function Feed() {
   return (
-    <div className='feed'>
+    <main className='feed'>
       {/* Header */}
       <div className='feed__header'>
         <h2>Página Inicial</h2>
@@ -15,7 +16,8 @@ function Feed() {
       <TweetBox />
       
       {/* Posts */}
-    </div>
+      <Post />
+    </main>
   )
 }
 
