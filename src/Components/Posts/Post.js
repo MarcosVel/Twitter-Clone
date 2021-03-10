@@ -24,8 +24,11 @@ function Post({
         <div className='post_header'>
           <div className='post_headerText'>
             <h3>
-              Rafeh Qazi<span><GoVerified className='post_badge' />@teste123</span>
+              Marcos Veloso
             </h3>
+            <span className='post_headerSpecial'>
+              <GoVerified className='post_badge' />@teste123
+            </span>
           </div>
           <div className='post_headerDescription'>
             <p>I challenge you to build a Twitter Clone with React</p>

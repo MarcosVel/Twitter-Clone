@@ -13,6 +13,31 @@
   margin-top: 12px;
 }
 
+.post_headerText {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.post_headerText > h3 {
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.post_headerSpecial {
+  display: flex;
+  align-items: center;
+  font-weight: 400;
+  font-size: 15px;
+  color: var(--placeholder-color);
+}
+
+.post_badge {
+  font-size: 17px !important;
+  margin-left: 3px;
+  margin-right: 4px;
+  color: white !important;
+}
+
 .post_footer {
   display: flex;
   justify-content: space-between;
