@@ -7,9 +7,13 @@
   max-width: 598px;
 }
 
+.post_avatar {
+  margin-right: 12px;
+}
+
 .post_body {
   flex: 1;
-  margin-left: 12px;
+  
 }
 
 .post_body > img {
@@ -48,6 +52,7 @@
 .post_footer {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   margin-top: 12px;
   max-width: 425px;
 }

@@ -37,7 +37,7 @@ function Post({
         <img src='https://pbs.twimg.com/media/Ev-jiMUWEAgLO5Y?format=jpg&name=medium' alt='noia' />
         <div className='post_footer'>
           <FaRegComment size='17' />
-          <BiRepost size='22' />
+          <BiRepost size='23' />
           <IoIosHeartEmpty size='20' />
           <FiShare size='17' />
         </div>
