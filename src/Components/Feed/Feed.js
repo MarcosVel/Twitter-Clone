@@ -9,7 +9,7 @@ function Feed() {
       {/* Header */}
       <div className='feed__header'>
         <h2>Página Inicial</h2>
-        <WiStars size='40' />
+        <WiStars color='var(--twitter-dark)' size='40' />
       </div>
 
       {/* TweetBox */}
