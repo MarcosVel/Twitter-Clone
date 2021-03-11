@@ -1,3 +1,8 @@
 .widgets {
   flex: 0.3;
 }
+
+.widgets_widgetContainer > h2 {
+  font-size: 19px;
+  font-weight: 800;
+}

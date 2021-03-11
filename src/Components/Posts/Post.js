@@ -34,7 +34,7 @@ function Post({
             <p>I challenge you to build a Twitter Clone with React</p>
           </div>
         </div>
-        <img src='https://pbs.twimg.com/media/Ev-jiMUWEAgLO5Y?format=jpg&name=medium' alt='noia' />
+        <img src='https://i.pinimg.com/564x/de/f6/96/def69643889ee29e232637646e839064.jpg' alt='noia' />
         <div className='post_footer'>
           <FaRegComment size='17' />
           <BiRepost size='23' />
