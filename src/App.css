@@ -9,6 +9,7 @@ body {
   --background-dark: #15202B;
   --lines-dark: #38444d; /* rgb(56, 68, 77) */
   --widgets-background: #192734;
+  --widgets-input-background: #253341;
 
   /* PLACEHOLDER */
   --placeholder-color: #8899A6;

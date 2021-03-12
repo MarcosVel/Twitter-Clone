@@ -9,7 +9,7 @@ function Widgets() {
   return (
     <div className='widgets'>
       <div className='widgets_input'>
-        <RiSearchLine size='19' className='widgets_searchIcon' />
+        <RiSearchLine size='19' color='var(--placeholder-color)' className='widgets_searchIcon' />
         <input placeholder='Buscar no Twitter' type='text' />
       </div>
 
