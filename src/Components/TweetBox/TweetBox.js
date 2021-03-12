@@ -3,7 +3,6 @@ import './TweetBox.css';
 
 function TweetBox() {
   return (
-    <>
       <div className="tweetBox">
         <form>
           <div className="tweetBox_input">
@@ -18,8 +17,6 @@ function TweetBox() {
           <Button className="tweetBox_tweetButton">Tweetar</Button>
         </form>
       </div>
-      <div className="separator"></div>
-    </>
   );
 }
 

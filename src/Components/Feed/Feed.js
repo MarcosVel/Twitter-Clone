@@ -15,6 +15,8 @@ function Feed() {
       {/* TweetBox */}
       <TweetBox />
       
+      <div className="separator"></div>
+
       {/* Posts */}
       <Post />
     </main>
