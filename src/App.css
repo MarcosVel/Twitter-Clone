@@ -8,6 +8,7 @@ body {
   --twitter-dark-hover: rgba(29, 161, 242, 0.1);
   --background-dark: #15202B;
   --lines-dark: #38444d; /* rgb(56, 68, 77) */
+  --widgets-background: #192734;
 
   /* PLACEHOLDER */
   --placeholder-color: #8899A6;

@@ -1,7 +1,6 @@
 import './Widgets.css';
 import {
   TwitterTimelineEmbed,
-  TwitterShareButton,
   TwitterTweetEmbed
 } from 'react-twitter-embed';
 import { RiSearchLine } from 'react-icons/ri';
@@ -16,6 +15,11 @@ function Widgets() {
 
       <div className='widgets_widgetContainer'>
         <h2>O que está acontecendo</h2>
+        <TwitterTweetEmbed tweetId={ '1342965469481992193' }
+          options={{
+            theme: 'dark'
+          }}
+        />
       </div>
     </div>
   );
