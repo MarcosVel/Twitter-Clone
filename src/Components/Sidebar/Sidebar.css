@@ -39,3 +39,40 @@
   width: 85% !important;
   margin: 20px auto !important;
 }
+
+/* MEDIA QUERY */ 
+@media (min-width: 1281px) {
+  .sidebar__tweet > span > svg {
+    display: none;
+  }
+}
+
+@media (max-width: 1280px) {
+  .sidebar {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+  }
+
+  .sidebar > a:first-child {
+    margin-right: 10px;
+  }
+
+  .sidebar > button {
+    margin: 20px 9px 20px 0!important;
+  }
+
+  .sidebar__twitterIcon {
+    margin-left: 0;
+  }
+
+  .sidebar__tweet {
+    width: 49px !important;
+    min-width: auto !important;
+    border-radius: 50% !important;
+  }
+
+  .sidebar__tweet > span > p {
+    display: none;
+  }
+}

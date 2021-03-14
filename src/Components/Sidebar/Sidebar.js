@@ -7,6 +7,7 @@ import { RiFileList2Line } from "react-icons/ri";
 import { BsPerson } from "react-icons/bs";
 import { CgMoreO } from "react-icons/cg";
 import SidebarOption from '../SidebarOption/SidebarOption';
+import { GiFeather } from 'react-icons/gi';
 import { Button } from '@material-ui/core';
 
 function Sidebar() {
@@ -32,7 +33,8 @@ function Sidebar() {
         className='sidebar__tweet'
         fullWidth
       >
-        Tweetar
+        <GiFeather size='25' />
+        <p>Tweetar</p>
       </Button>
 
     </div>

@@ -24,3 +24,18 @@
 .sidebarOption--active {
   color: var(--twitter-dark);
 }
+
+/* MEDIA QUERY */
+@media (max-width: 1280px) {
+  .sidebarOption {
+    margin: 3px 7px;
+  }
+
+  .sidebarOption > svg {
+    padding: 14px;
+  }
+
+  .sidebarOption > h2 {
+    display: none;
+  }
+}
