@@ -11,6 +11,11 @@
   margin-right: 12px;
 }
 
+.MuiAvatar-root {
+  width: 47px !important;
+  height: 47px !important;
+}
+
 .post_body {
   flex: 1;
   

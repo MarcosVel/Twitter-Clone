@@ -11,10 +11,17 @@
   display: flex;
 }
 
-.tweetBox_input > input {
-  flex: 1;
+.tweetBox_Body {
+  display: flex;
+  flex-direction: column;
+  width: 100%
+}
+
+.tweetBox_Body > input {
+  /* flex: 1; */
   border: none;
   outline-style: none;
+  padding: 12px 0;
 
   font-family: inherit;
   font-size: 19px;
@@ -25,19 +32,19 @@
   background-color: inherit;
 }
 
-.tweetBox_input > input::-webkit-input-placeholder {
+.tweetBox_Body > input::-webkit-input-placeholder {
   color: var(--placeholder-color);
 }
 
-.tweetBox_input > input:-moz-placeholder { /* Firefox 18- */
+.tweetBox_Body > input:-moz-placeholder { /* Firefox 18- */
   color: var(--placeholder-color);
 }
 
-.tweetBox_input > input::-moz-placeholder {  /* Firefox 19+ */
+.tweetBox_Body > input::-moz-placeholder {  /* Firefox 19+ */
   color: var(--placeholder-color);
 }
 
-.tweetBox_input > input:-ms-input-placeholder {  
+.tweetBox_Body > input:-ms-input-placeholder {  
   color: var(--placeholder-color);
 }
 
@@ -59,4 +66,26 @@
   height: 40px !important;
 
   margin-left: auto !important;
+}
+
+.tweetBox_twitterIcon {
+  padding: 7px 8px;
+  border-radius: 50%;
+  transition: 0.2s;
+}
+
+.tweetBox_twitterIcon:hover {
+  background-color: var(--twitter-dark-hover);
+}
+
+.tweetBox_Footer {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 12px;
+}
+
+/* FOCUS */
+.tweetBox_Body > input:focus-within {
+  padding-bottom: 58px;
+  border-bottom: 1px solid var(--lines-dark);
 }

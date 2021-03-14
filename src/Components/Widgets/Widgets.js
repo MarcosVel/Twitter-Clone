@@ -15,17 +15,17 @@ function Widgets() {
 
       <div className='widgets_widgetContainer'>
         <h2>O que está acontecendo</h2>
-        <TwitterTweetEmbed 
+        <TwitterTweetEmbed
           tweetId={ '1342965469481992193' }
           options={{
             theme: 'dark',
           }}
         />
-        
-        <TwitterTimelineEmbed 
-          sourceType="url" 
-          url="https://twitter.com/UOLNoticias" 
-          theme="dark" 
+
+        <TwitterTimelineEmbed
+          sourceType="url"
+          url="https://twitter.com/UOLNoticias"
+          theme="dark"
           noScrollbar
           lang="pt-br"
           options={{
@@ -33,7 +33,6 @@ function Widgets() {
             height: 400,
           }}
         />
-
       </div>
     </div>
   );

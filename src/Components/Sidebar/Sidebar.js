@@ -13,7 +13,7 @@ function Sidebar() {
   return (
     <div className="sidebar">
       {/* Twitter Icon */ }
-      <a href="https://twitter.com/marquin_veloso" >
+      <a href="/" >
         <AiOutlineTwitter size='35' className='sidebar__twitterIcon' />
       </a>
 
