@@ -6,7 +6,13 @@ import { HiOutlineEmojiHappy } from "react-icons/hi";
 import { useState } from 'react';
 
 function TweetBox() {
-  const [ tweetMessage, setTweetMessage ] = useState("");
+  const [ tweetMessage, setTweetMessage ] = useState('');
+  const [ tweetImage, setTweetImage ] = useState('');
+  
+  const sendTweet = e => {
+    // stops reload
+    e.preventDefault();
+  }
 
   return (
     <div className="tweetBox">
@@ -38,15 +44,22 @@ function TweetBox() {
                   <AiOutlineSchedule size='24' color='var(--twitter-dark)' className='tweetBox_twitterIcon' />
                 </a>
               </div>
-              <Button className="tweetBox_tweetButton">Tweetar</Button>
+              <Button
+                className="tweetBox_tweetButton"
+                type='submit'
+                onClick={ sendTweet }
+              >Tweetar
+              </Button>
             </div>
           </div>
         </div>
         {/* <input
-            className='tweetBox_imageInput'
-            placeholder='Optional: Enter image URL'
-            type='text'
-          /> */}
+          className='tweetBox_imageInput'
+          placeholder='Optional: Enter image URL'
+          type='text'
+          value={ tweetImage }
+          onChange={ (e) => setTweetImage(e.target.value) }
+        /> */}
       </form>
     </div>
   );
