@@ -2,9 +2,9 @@ import './SidebarOption.css';
 
 function SidebarOption({ active, text, Icon }) {
   return (
-    <div className={`sidebarOption ${active && 'sidebarOption--active'}`}>
+    <div className={ `sidebarOption ${ active && 'sidebarOption--active' }` }>
       <Icon size='25' />
-      <h2>{text}</h2>
+      <h2>{ text }</h2>
     </div>
   );
 }
