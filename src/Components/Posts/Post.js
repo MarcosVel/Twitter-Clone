@@ -34,7 +34,7 @@ function Post({
             <p>{text}</p>
           </div>
         </div>
-        <img src={image} alt='' />
+        <img src={image} alt='Imagem de um tweet' />
         <div className='post_footer'>
           <FaRegComment size='17' />
           <BiRepost size='23' />
