@@ -4,14 +4,28 @@ import { AiOutlineGif, AiOutlinePicture, AiOutlineSchedule } from "react-icons/a
 import { RiBarChartHorizontalFill } from "react-icons/ri";
 import { HiOutlineEmojiHappy } from "react-icons/hi";
 import { useState } from 'react';
+import db from '../../firebase';
 
 function TweetBox() {
   const [ tweetMessage, setTweetMessage ] = useState('');
   const [ tweetImage, setTweetImage ] = useState('');
-  
-  const sendTweet = e => {
-    // stops reload
+
+  const sendTweet = (e) => {
+    // stops reload on submit
     e.preventDefault();
+
+    db.collection('posts').add({
+      displayName: 'Rafeh Qazi',
+      username: 'cleverqazi',
+      verified: true,
+      text: tweetMessage,
+      image: tweetImage,
+      avatar: 'https://instagram.fplu1-1.fna.fbcdn.net/v/t51.2885-19/s150x150/124595979_190868415857383_3289167799779777978_n.jpg?tp=1&_nc_ht=instagram.fplu1-1.fna.fbcdn.net&_nc_ohc=BCjvgNi6cVUAX_nW16a&oh=903f4ec9746cb206afa6f79f4c59667c&oe=606ED973'
+    });
+
+    // to clean
+    setTweetMessage('');
+    setTweetImage('');
   }
 
   return (
@@ -44,6 +58,13 @@ function TweetBox() {
                   <AiOutlineSchedule size='24' color='var(--twitter-dark)' className='tweetBox_twitterIcon' />
                 </a>
               </div>
+              <input
+                className='tweetBox_imageInput'
+                placeholder='Optional: Enter image URL'
+                type='text'
+                value={ tweetImage }
+                onChange={ (e) => setTweetImage(e.target.value) }
+              />
               <Button
                 className="tweetBox_tweetButton"
                 type='submit'
@@ -53,13 +74,6 @@ function TweetBox() {
             </div>
           </div>
         </div>
-        {/* <input
-          className='tweetBox_imageInput'
-          placeholder='Optional: Enter image URL'
-          type='text'
-          value={ tweetImage }
-          onChange={ (e) => setTweetImage(e.target.value) }
-        /> */}
       </form>
     </div>
   );

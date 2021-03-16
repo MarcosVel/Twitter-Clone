@@ -18,23 +18,25 @@ function Post({
   return (
     <section className='post'>
       <div className='post_avatar'>
-        <Avatar src={avatar} />
+        <Avatar src={ avatar } />
       </div>
       <div className='post_body'>
         <div className='post_header'>
           <div className='post_headerText'>
             <h3>
-              {displayName}
+              { displayName }
             </h3>
             <span className='post_headerSpecial'>
-              { verified && <GoVerified className='post_badge' />}@{username}
+              { verified && <GoVerified className='post_badge' /> }@{username}
             </span>
           </div>
           <div className='post_headerDescription'>
-            <p>{text}</p>
+            <p>{ text }</p>
           </div>
         </div>
-        <img src={image} alt='Imagem de um tweet' />
+        { image != '' && (
+          <img src={ image } alt='Imagem de um tweet' />
+        ) }
         <div className='post_footer'>
           <FaRegComment size='17' />
           <BiRepost size='23' />
