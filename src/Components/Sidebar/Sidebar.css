@@ -29,6 +29,8 @@
   font-size: 15px !important;
   font-weight: 700 !important;
   text-transform: inherit !important;
+
+  max-width: 226px;
   
   border: none !important;
   border-radius: 30px !important;

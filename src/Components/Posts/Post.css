@@ -18,7 +18,7 @@
 
 .post_body {
   flex: 1;
-  
+  max-width: 506px;
 }
 
 .post_body > img {
