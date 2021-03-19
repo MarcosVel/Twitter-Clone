@@ -68,10 +68,21 @@
   margin-left: auto !important;
 }
 
+.tweetBox_btnGif {
+  background: none;
+  border: none;
+  outline-style: none;
+}
+
+.tweetBox_btnGif .tweetBox_twitterIcon {
+  cursor: pointer !important;
+}
+
 .tweetBox_twitterIcon {
   padding: 7px 8px;
   border-radius: 50%;
   transition: 0.2s;
+  cursor: default;
 }
 
 .tweetBox_twitterIcon:hover {

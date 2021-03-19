@@ -5,10 +5,12 @@ import { RiBarChartHorizontalFill } from "react-icons/ri";
 import { HiOutlineEmojiHappy } from "react-icons/hi";
 import { useState } from 'react';
 import db from '../../firebase';
+import SimpleModal from '../../utils/Modal/SimpleModal';
 
 function TweetBox() {
   const [ tweetMessage, setTweetMessage ] = useState('');
   const [ tweetImage, setTweetImage ] = useState('');
+  const [ open, setOpen ] = useState(false);
 
   const sendTweet = (e) => {
     // stops reload on submit
@@ -28,6 +30,36 @@ function TweetBox() {
     setTweetImage('');
   }
 
+  // MODAL
+  const handleOpenModal = () => {
+    setOpen(true);
+  }
+
+  const handleCloseModal = () => {
+    setOpen(false);
+  }
+
+  function manipularModal() {
+    return (
+      <SimpleModal
+        open={ open }
+        close={ () => {
+          handleCloseModal();
+        } }
+        body={
+          <input
+            className='tweetBox_imageInput'
+            placeholder='Optional: Enter image URL'
+            type='text'
+            value={ tweetImage }
+            onChange={ (e) => setTweetImage(e.target.value) }
+          />
+        }
+      >
+      </SimpleModal>
+    );
+  }
+
   return (
     <div className="tweetBox">
       <form>
@@ -45,9 +77,13 @@ function TweetBox() {
                 <a href="/">
                   <AiOutlinePicture size='24' color='var(--twitter-dark)' className='tweetBox_twitterIcon' />
                 </a>
-                <a href="/">
+                <button 
+                  type='button'
+                  className='tweetBox_btnGif'
+                  onClick={ handleOpenModal } 
+                >
                   <AiOutlineGif size='24' color='var(--twitter-dark)' className='tweetBox_twitterIcon' />
-                </a>
+                </button>
                 <a href="/">
                   <RiBarChartHorizontalFill size='24' color='var(--twitter-dark)' className='tweetBox_twitterIcon' />
                 </a>
@@ -58,13 +94,13 @@ function TweetBox() {
                   <AiOutlineSchedule size='24' color='var(--twitter-dark)' className='tweetBox_twitterIcon' />
                 </a>
               </div>
-              <input
+              {/* <input
                 className='tweetBox_imageInput'
                 placeholder='Optional: Enter image URL'
                 type='text'
                 value={ tweetImage }
                 onChange={ (e) => setTweetImage(e.target.value) }
-              />
+              /> */}
               <Button
                 className="tweetBox_tweetButton"
                 type='submit'
@@ -75,6 +111,7 @@ function TweetBox() {
           </div>
         </div>
       </form>
+      { manipularModal() }
     </div>
   );
 }
