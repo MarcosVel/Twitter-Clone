@@ -7,7 +7,7 @@
   width: 100%;
   max-width: 275px;
 
-  flex: 0.3;
+  /* flex: 0.3; */
 }
 
 .sidebar__twitterIcon {
@@ -76,5 +76,12 @@
 
   .sidebar__tweet > span > p {
     display: none;
+  }
+}
+
+@media (max-width: 1024px) {
+  .sidebar {
+    padding-left: 0px;
+    padding-right: 0px;
   }
 }

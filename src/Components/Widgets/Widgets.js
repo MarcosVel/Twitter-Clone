@@ -16,6 +16,7 @@ function Widgets() {
       <div className='widgets_widgetContainer'>
         <h2>O que está acontecendo</h2>
         <TwitterTweetEmbed
+          className='widgets_tweetEmbed'
           tweetId={ '1342965469481992193' }
           options={{
             theme: 'dark',

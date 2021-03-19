@@ -1,5 +1,5 @@
 .widgets {
-  flex: 0.3;
+  /* flex: 0.3; */
   max-width: 350px;
   width: 100%;
   margin-left: 30px;
@@ -49,6 +49,11 @@
   border-bottom: 1px solid var(--lines-dark);
 }
 
+.widgets_tweetEmbed {
+  position: relative !important;
+  width: 100%;
+}
+
 /* focus-within */
 .widgets_input:focus-within {
   border: 1px solid var(--twitter-dark);
@@ -80,4 +85,19 @@
 
 .widgets_input > input:-ms-input-placeholder {  
   color: var(--placeholder-color);
+}
+
+/* MEDIA QUERY */
+@media (max-width: 1004px) {
+  .widgets {
+    display: none;
+  }
+}
+
+@media (max-width: 1024px) {
+  .widgets {
+    max-width: 290px;
+    width: 100% !important;
+    margin: 0 20px;
+  }
 }
