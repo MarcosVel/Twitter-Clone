@@ -80,7 +80,7 @@
   border: none;
 }
 
-.tweetBox_searchIcon {
+.tweetBox_divInput > svg {
   margin-left: 21px;
 }
 

@@ -34,11 +34,11 @@ function TweetBox() {
   // MODAL
   const handleOpenModal = () => {
     setOpen(true);
+    setTweetImage('');
   }
 
   const handleCloseModal = () => {
     setOpen(false);
-    setTweetImage('');
   }
 
   function manipularModal() {
@@ -54,7 +54,7 @@ function TweetBox() {
               <CgClose size='22' />
             </IconButton>
             <div className='tweetBox_divInput'>
-              <RiSearchLine size='20' color='var(--placeholder-color)' className='tweetBox_searchIcon' />
+              <RiSearchLine size='20' color='var(--placeholder-color)' aria-label='Colar um GIF' />
               <input
                 placeholder='Cole aqui a URL do GIF'
                 type='text'
@@ -90,6 +90,7 @@ function TweetBox() {
                 <button
                   type='button'
                   className='tweetBox_btnGif'
+                  aria-label='Adicionar um GIF'
                   onClick={ handleOpenModal }
                 >
                   <AiOutlineGif size='24' color='var(--twitter-dark)' className='tweetBox_twitterIcon' />
