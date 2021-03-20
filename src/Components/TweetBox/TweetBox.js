@@ -49,9 +49,8 @@ function TweetBox() {
         body={
           <div className='tweetBox_divImageInput'>
             <div className='tweetBox_divInput'>
-              <RiSearchLine size='20' color='var(--twitter-dark)' className='tweetBox_searchIcon' />
+              <RiSearchLine size='20' color='var(--placeholder-color)' className='tweetBox_searchIcon' />
               <input
-                className='tweetBox_imageInput'
                 placeholder='Cole aqui a URL do GIF'
                 type='text'
                 value={ tweetImage }

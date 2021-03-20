@@ -61,19 +61,20 @@
 .tweetBox_divInput {
   display: flex;
   align-items: center;
+
   width: 510px;
-  border: none;
   margin: 8px 0;
+
   background-color: var(--widgets-input-background);
   border-radius: 9999px;
-  border: 1px solid var(--twitter-dark);
+  border: none;
 }
 
 .tweetBox_searchIcon {
   margin-left: 22px;
 }
 
-.tweetBox_imageInput {
+.tweetBox_divInput > input {
   height: 35px;
   border: none;
   padding: 0 20px;
@@ -123,6 +124,22 @@
   display: flex;
   justify-content: space-between;
   margin-top: 12px;
+}
+
+/* focus-within */
+.tweetBox_divInput:focus-within {
+  border: 1px solid var(--twitter-dark);
+  background-color: transparent;
+  outline-style: unset;
+  padding: 0;
+}
+
+.tweetBox_divInput:focus-within > svg {
+  color: var(--twitter-dark) !important;
+}
+
+.tweetBox_divInput:focus-within > input {
+  background-color: transparent;
 }
 
 /* FOCUS */
