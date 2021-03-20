@@ -83,5 +83,13 @@
   .sidebar {
     padding-left: 0px;
     padding-right: 0px;
+    width: auto !important;
+  }
+}
+
+@media (max-width: 1004px) {
+  .sidebar {
+    padding-left: 12px;
+    padding-right: 12px;
   }
 }

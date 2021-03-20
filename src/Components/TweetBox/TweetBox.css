@@ -75,7 +75,7 @@
 }
 
 .tweetBox_divInput > input {
-  height: 35px;
+  height: 37px;
   border: none;
   padding: 0 20px;
   outline-style: unset;
@@ -128,10 +128,10 @@
 
 /* focus-within */
 .tweetBox_divInput:focus-within {
-  border: 1px solid var(--twitter-dark);
-  background-color: transparent;
-  outline-style: unset;
   padding: 0;
+  background-color: transparent;
+  border: 1px solid var(--twitter-dark);
+  outline-style: unset;
 }
 
 .tweetBox_divInput:focus-within > svg {

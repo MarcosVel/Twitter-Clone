@@ -37,6 +37,7 @@ function TweetBox() {
 
   const handleCloseModal = () => {
     setOpen(false);
+    setTweetImage('');
   }
 
   function manipularModal() {
