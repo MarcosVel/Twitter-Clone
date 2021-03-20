@@ -1,11 +1,12 @@
-import { Avatar, Button } from '@material-ui/core';
-import './TweetBox.css';
-import { AiOutlineGif, AiOutlinePicture, AiOutlineSchedule } from "react-icons/ai";
-import { RiBarChartHorizontalFill, RiSearchLine } from "react-icons/ri";
-import { HiOutlineEmojiHappy } from "react-icons/hi";
+import { Avatar, Button, IconButton } from '@material-ui/core';
 import { useState } from 'react';
+import { AiOutlineGif, AiOutlinePicture, AiOutlineSchedule } from "react-icons/ai";
+import { HiOutlineEmojiHappy } from "react-icons/hi";
+import { RiBarChartHorizontalFill, RiSearchLine } from "react-icons/ri";
+import { CgClose } from "react-icons/cg";
 import db from '../../firebase';
 import SimpleModal from '../../utils/Modal/SimpleModal';
+import './TweetBox.css';
 
 function TweetBox() {
   const [ tweetMessage, setTweetMessage ] = useState('');
@@ -49,11 +50,15 @@ function TweetBox() {
         } }
         body={
           <div className='tweetBox_divImageInput'>
+            <IconButton aria-label='Close' onClick={ () => handleCloseModal() }>
+              <CgClose size='22' />
+            </IconButton>
             <div className='tweetBox_divInput'>
               <RiSearchLine size='20' color='var(--placeholder-color)' className='tweetBox_searchIcon' />
               <input
                 placeholder='Cole aqui a URL do GIF'
                 type='text'
+                autoFocus
                 value={ tweetImage }
                 onChange={ (e) => setTweetImage(e.target.value) }
               />
@@ -99,19 +104,11 @@ function TweetBox() {
                   <AiOutlineSchedule size='24' color='var(--twitter-dark)' className='tweetBox_twitterIcon' />
                 </a>
               </div>
-              {/* <input
-                className='tweetBox_imageInput'
-                placeholder='Optional: Enter image URL'
-                type='text'
-                value={ tweetImage }
-                onChange={ (e) => setTweetImage(e.target.value) }
-              /> */}
               <Button
                 className="tweetBox_tweetButton"
                 type='submit'
                 onClick={ sendTweet }
-              >Tweetar
-              </Button>
+              >Tweetar</Button>
             </div>
           </div>
         </div>

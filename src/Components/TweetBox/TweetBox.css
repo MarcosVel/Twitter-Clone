@@ -50,12 +50,21 @@
 
 .tweetBox_divImageInput {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
-  width: 600px;
+  width: 568px;
+  padding: 0 16px;
   background-color: var(--background-dark);
   outline-style: unset;
   border-radius: 16px;
+}
+
+.tweetBox_divImageInput > button:hover {
+  background-color: var(--twitter-dark-hover);
+}
+
+.tweetBox_divImageInput > button > span > svg {
+  color: var(--twitter-dark);
 }
 
 .tweetBox_divInput {
@@ -63,7 +72,8 @@
   align-items: center;
 
   width: 510px;
-  margin: 8px 0;
+  margin: 7px 0;
+  padding: 1px;
 
   background-color: var(--widgets-input-background);
   border-radius: 9999px;
@@ -71,7 +81,7 @@
 }
 
 .tweetBox_searchIcon {
-  margin-left: 22px;
+  margin-left: 21px;
 }
 
 .tweetBox_divInput > input {
