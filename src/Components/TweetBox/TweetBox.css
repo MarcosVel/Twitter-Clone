@@ -48,9 +48,39 @@
   color: var(--placeholder-color);
 }
 
-.tweetBox_imageInput {
+.tweetBox_divImageInput {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 600px;
+  background-color: var(--background-dark);
+  outline-style: unset;
+  border-radius: 16px;
+}
+
+.tweetBox_divInput {
+  display: flex;
+  align-items: center;
+  width: 510px;
   border: none;
-  padding: 10px;
+  margin: 8px 0;
+  background-color: var(--widgets-input-background);
+  border-radius: 9999px;
+  border: 1px solid var(--twitter-dark);
+}
+
+.tweetBox_searchIcon {
+  margin-left: 22px;
+}
+
+.tweetBox_imageInput {
+  height: 35px;
+  border: none;
+  padding: 0 20px;
+  outline-style: unset;
+  background-color: transparent;
+  color: #fff;
+  font-size: 15px;
 }
 
 .tweetBox_tweetButton {
@@ -99,4 +129,21 @@
 .tweetBox_Body > input:focus-within {
   padding-bottom: 58px;
   border-bottom: 1px solid var(--lines-dark);
+}
+
+/* placeholder */
+.tweetBox_divInput > input::-webkit-input-placeholder {
+  color: var(--placeholder-color);
+}
+
+.tweetBox_divInput > input:-moz-placeholder { /* Firefox 18- */
+  color: var(--placeholder-color);
+}
+
+.tweetBox_divInput > input::-moz-placeholder {  /* Firefox 19+ */
+  color: var(--placeholder-color);
+}
+
+.tweetBox_divInput > input:-ms-input-placeholder {  
+  color: var(--placeholder-color);
 }

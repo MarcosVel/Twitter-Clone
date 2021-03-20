@@ -6,7 +6,8 @@ const useStyles = makeStyles(() => ({
     display: 'flex',
     margin: 'auto',
     justifyContent: 'center',
-    height: '10%'
+    alignItems: 'center',
+    // height: '10%'
   }
 }));
 

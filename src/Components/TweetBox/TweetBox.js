@@ -1,7 +1,7 @@
 import { Avatar, Button } from '@material-ui/core';
 import './TweetBox.css';
 import { AiOutlineGif, AiOutlinePicture, AiOutlineSchedule } from "react-icons/ai";
-import { RiBarChartHorizontalFill } from "react-icons/ri";
+import { RiBarChartHorizontalFill, RiSearchLine } from "react-icons/ri";
 import { HiOutlineEmojiHappy } from "react-icons/hi";
 import { useState } from 'react';
 import db from '../../firebase';
@@ -47,13 +47,18 @@ function TweetBox() {
           handleCloseModal();
         } }
         body={
-          <input
-            className='tweetBox_imageInput'
-            placeholder='Optional: Enter image URL'
-            type='text'
-            value={ tweetImage }
-            onChange={ (e) => setTweetImage(e.target.value) }
-          />
+          <div className='tweetBox_divImageInput'>
+            <div className='tweetBox_divInput'>
+              <RiSearchLine size='20' color='var(--twitter-dark)' className='tweetBox_searchIcon' />
+              <input
+                className='tweetBox_imageInput'
+                placeholder='Cole aqui a URL do GIF'
+                type='text'
+                value={ tweetImage }
+                onChange={ (e) => setTweetImage(e.target.value) }
+              />
+            </div>
+          </div>
         }
       >
       </SimpleModal>
@@ -77,10 +82,10 @@ function TweetBox() {
                 <a href="/">
                   <AiOutlinePicture size='24' color='var(--twitter-dark)' className='tweetBox_twitterIcon' />
                 </a>
-                <button 
+                <button
                   type='button'
                   className='tweetBox_btnGif'
-                  onClick={ handleOpenModal } 
+                  onClick={ handleOpenModal }
                 >
                   <AiOutlineGif size='24' color='var(--twitter-dark)' className='tweetBox_twitterIcon' />
                 </button>
