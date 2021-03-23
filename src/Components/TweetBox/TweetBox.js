@@ -84,7 +84,7 @@ function TweetBox() {
             />
             <div className='tweetBox_Footer'>
               <div className='tweetBox_divIcons'>
-                <a href="/">
+                <a href="#">
                   <AiOutlinePicture size='24' color='var(--twitter-dark)' className='tweetBox_twitterIcon' />
                 </a>
                 <button
@@ -95,13 +95,13 @@ function TweetBox() {
                 >
                   <AiOutlineGif size='24' color='var(--twitter-dark)' className='tweetBox_twitterIcon' />
                 </button>
-                <a href="/">
+                <a href="#">
                   <RiBarChartHorizontalFill size='24' color='var(--twitter-dark)' className='tweetBox_twitterIcon' />
                 </a>
-                <a href="/">
+                <a href="#">
                   <HiOutlineEmojiHappy size='24' color='var(--twitter-dark)' className='tweetBox_twitterIcon' />
                 </a>
-                <a href="/">
+                <a href="#">
                   <AiOutlineSchedule size='24' color='var(--twitter-dark)' className='tweetBox_twitterIcon' />
                 </a>
               </div>
