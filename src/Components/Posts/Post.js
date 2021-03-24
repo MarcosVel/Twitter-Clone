@@ -11,13 +11,13 @@ const Post = forwardRef(({
   displayName,
   username,
   verified,
-  // timestamp,
   text,
   image,
   avatar
 }, ref) => {
+
   return (
-    <section className='post' ref={ref}>
+    <section className='post' ref={ ref }>
       <div className='post_avatar'>
         <Avatar src={ avatar } />
       </div>

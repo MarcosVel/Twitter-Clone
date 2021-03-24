@@ -10,9 +10,12 @@ function Feed() {
   const [ posts, setPosts ] = useState([]);
 
   useEffect(() => {
-    db.collection('posts').onSnapshot(snapshot => (
-      setPosts(snapshot.docs.map(doc => doc.data()))
-    ))
+    db.collection('posts').orderBy('timestamp', 'desc').onSnapshot(snapshot => {
+      setPosts(snapshot.docs.map(doc => ({
+        id: doc.id,
+        post: doc.data(),
+      })));
+    })
   }, []);
 
   return (
@@ -27,9 +30,9 @@ function Feed() {
       <div className="separator"></div>
 
       <FlipMove>
-        { posts.map(post => (
+        { posts.map(({ id, post }) => (
           <Post
-            key={ post.text }
+            key={ id }
             displayName={ post.displayName }
             username={ post.username }
             verified={ post.verified }
