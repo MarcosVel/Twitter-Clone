@@ -5,8 +5,9 @@ import { FaRegComment } from 'react-icons/fa';
 import { BiRepost } from 'react-icons/bi';
 import { IoIosHeartEmpty } from 'react-icons/io';
 import { FiShare } from 'react-icons/fi';
+import { forwardRef } from 'react';
 
-function Post({
+const Post = forwardRef(({
   displayName,
   username,
   verified,
@@ -14,9 +15,9 @@ function Post({
   text,
   image,
   avatar
-}) {
+}, ref) => {
   return (
-    <section className='post'>
+    <section className='post' ref={ref}>
       <div className='post_avatar'>
         <Avatar src={ avatar } />
       </div>
@@ -27,7 +28,7 @@ function Post({
               { displayName }
             </h3>
             <span className='post_headerSpecial'>
-              { verified && <GoVerified className='post_badge' /> }@{username}
+              { verified && <GoVerified className='post_badge' /> }@{ username }
             </span>
           </div>
           <div className='post_headerDescription'>
@@ -46,6 +47,6 @@ function Post({
       </div>
     </section>
   );
-}
+});
 
 export default Post;
