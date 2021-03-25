@@ -17,7 +17,6 @@
 }
 
 .post_body {
-  flex: 1;
   max-width: 506px;
 }
 
@@ -60,4 +59,12 @@
   align-items: center;
   margin-top: 12px;
   max-width: 425px;
+}
+
+
+/* COMENTS */
+.post_comment {
+  display: flex;
+  padding: 12px 16px;
+
 }
