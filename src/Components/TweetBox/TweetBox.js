@@ -4,7 +4,7 @@ import { AiOutlineGif, AiOutlinePicture, AiOutlineSchedule } from "react-icons/a
 import { HiOutlineEmojiHappy } from "react-icons/hi";
 import { RiBarChartHorizontalFill, RiSearchLine } from "react-icons/ri";
 import { CgClose } from "react-icons/cg";
-import db from '../../firebase';
+import { db } from '../../firebase';
 import SimpleModal from '../../utils/Modal/SimpleModal';
 import './TweetBox.css';
 import firebase from 'firebase';
