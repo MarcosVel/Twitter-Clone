@@ -49,7 +49,7 @@ const Post = forwardRef(({
         </div>
       </section>
 
-      <section className='post_comment'>
+      {/* <section className='post_comment'>
         <div className='post_avatar'>
           <Avatar src={ avatar } />
         </div>
@@ -66,7 +66,7 @@ const Post = forwardRef(({
             Teste
           </h2>
         </div>
-      </section>
+      </section> */}
     </>
   );
 });
