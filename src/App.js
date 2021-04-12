@@ -5,14 +5,20 @@ import Widgets from './Components/Widgets/Widgets';
 import Login from './Components/Login/Login';
 
 function App() {
+
+  const user = null;
+
   return (
     <>
-      <Login />
-      <div className="app">
-        {/* <Sidebar />
-      <Feed />
-      <Widgets /> */}
-      </div>
+      { !user ? (
+        <Login />
+      ) : (
+        <div className="app">
+          <Sidebar />
+          <Feed />
+          <Widgets />
+        </div>
+      ) }
     </>
   );
 }
