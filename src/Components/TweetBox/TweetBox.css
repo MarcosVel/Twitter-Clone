@@ -49,15 +49,18 @@
   color: var(--placeholder-color);
 }
 
+.tweetBox_divModal {
+  background-color: var(--background-dark);
+  border-radius: 16px;
+  outline-style: unset;
+}
+
 .tweetBox_divImageInput {
   display: flex;
   justify-content: space-between;
   align-items: center;
   width: 568px;
   padding: 0 16px;
-  background-color: var(--background-dark);
-  outline-style: unset;
-  border-radius: 16px;
 }
 
 .tweetBox_divImageInput > button:hover {
@@ -93,6 +96,25 @@
   background-color: transparent;
   color: #fff;
   font-size: 15px;
+  flex: 1;
+}
+
+.tweetBox_divShowGIF {
+  display: flex;
+  justify-content: center;
+  height: auto;
+  
+
+}
+
+.tweetBox_Gif {
+  border-radius: 16px;
+  border: solid 1px var(--lines-dark);
+  max-width: 508px;
+  object-fit: contain;
+  margin: 12px 0;
+  max-height: 504px;
+  background-color: black;
 }
 
 .tweetBox_tweetButton {

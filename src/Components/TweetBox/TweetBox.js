@@ -38,7 +38,7 @@ function TweetBox() {
   // MODAL
   const handleOpenModal = () => {
     setOpen(true);
-    setTweetImage('');
+    // setTweetImage('');
   }
 
   const handleCloseModal = () => {
@@ -53,21 +53,26 @@ function TweetBox() {
           handleCloseModal();
         } }
         body={
-          <div className='tweetBox_divImageInput'>
-            <IconButton aria-label='Close' onClick={ () => handleCloseModal() }>
-              <CgClose size='22' />
-            </IconButton>
-            <div className='tweetBox_divInput'>
-              <RiSearchLine size='20' color='var(--placeholder-color)' aria-label='Colar um GIF' />
-              <input
-                placeholder='Cole aqui a URL do GIF'
-                type='text'
-                autoFocus
-                value={ tweetImage }
-                onChange={ (e) => setTweetImage(e.target.value) }
-              />
+          <section className="tweetBox_divModal">
+            <div className='tweetBox_divImageInput'>
+              <IconButton aria-label='Close' onClick={ () => handleCloseModal() }>
+                <CgClose size='22' />
+              </IconButton>
+              <div className='tweetBox_divInput'>
+                <RiSearchLine size='20' color='var(--placeholder-color)' aria-label='Colar um GIF' />
+                <input
+                  placeholder='Cole aqui a URL do GIF'
+                  type='text'
+                  autoFocus
+                  value={ tweetImage }
+                  onChange={ (e) => setTweetImage(e.target.value) }
+                />
+              </div>
             </div>
-          </div>
+            <div className='tweetBox_divShowGIF'>
+              <img src={ tweetImage } className='tweetBox_Gif' />
+            </div>
+          </section>
         }
       >
       </SimpleModal>
