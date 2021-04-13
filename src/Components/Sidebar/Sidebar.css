@@ -30,16 +30,18 @@
   font-weight: 700 !important;
   text-transform: inherit !important;
 
-  max-width: 226px;
+  width: 100% !important;
+  max-width: 225px !important;
   
   border: none !important;
   border-radius: 30px !important;
   height: 48px !important;
-  /* margin-top: 20px !important; */  /* APAGAR */
 
   display: flex !important;
-  width: 85% !important;
   margin: 20px auto !important;
+
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif !important;
+  letter-spacing: normal !important;
 }
 
 /* MEDIA QUERY */ 
