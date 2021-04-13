@@ -3,7 +3,7 @@ import { WiStars } from "react-icons/wi";
 import TweetBox from '../TweetBox/TweetBox';
 import Post from '../Posts/Post';
 import { useState, useEffect } from 'react';
-import { db } from '../../firebase';
+import db from '../../firebase';
 import FlipMove from 'react-flip-move';
 
 function Feed() {
