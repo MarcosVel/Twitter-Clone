@@ -110,6 +110,10 @@
   margin-left: auto !important;
 }
 
+.disabled {
+  opacity: .5;
+}
+
 .tweetBox_btnGif {
   background: none;
   border: none;

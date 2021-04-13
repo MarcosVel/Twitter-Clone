@@ -44,6 +44,10 @@
   letter-spacing: normal !important;
 }
 
+.sidebar__tweet:hover {
+  opacity: .9;
+}
+
 /* MEDIA QUERY */ 
 @media (min-width: 1281px) {
   .sidebar__tweet > span > svg {

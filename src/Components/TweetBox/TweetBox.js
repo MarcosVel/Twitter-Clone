@@ -22,7 +22,7 @@ function TweetBox() {
 
     db.collection('posts').add({
       displayName: user.displayName,
-      username: additionalUserInfo.family_name,
+      username: additionalUserInfo.given_name,
       verified: user.emailVerified,
       text: tweetMessage,
       image: tweetImage,
@@ -78,13 +78,13 @@ function TweetBox() {
     <div className="tweetBox">
       <form>
         <div className="tweetBox_input">
-          <Avatar className='post_avatar' src={user.photoURL} />
+          <Avatar className='post_avatar' src={ user.photoURL } />
           <div className='tweetBox_Body' >
             <input
-              type="text"
+              type='text'
               placeholder='O que está acontecendo?'
-              onChange={ (e) => setTweetMessage(e.target.value) }
               value={ tweetMessage }
+              onChange={ (e) => setTweetMessage(e.target.value) }
             />
             <div className='tweetBox_Footer'>
               <div className='tweetBox_divIcons'>
@@ -109,11 +109,22 @@ function TweetBox() {
                   <AiOutlineSchedule size='24' color='var(--twitter-dark)' className='tweetBox_twitterIcon' />
                 </a>
               </div>
-              <Button
-                className="tweetBox_tweetButton"
-                type='submit'
-                onClick={ sendTweet }
-              >Tweetar</Button>
+              {
+                (tweetMessage != '') || (tweetImage != '') ? (
+                  <Button
+                    className="tweetBox_tweetButton"
+                    type='submit'
+                    onClick={ sendTweet }
+                  >Tweetar</Button>
+                ) : (
+                  <Button
+                    className="tweetBox_tweetButton disabled"
+                    type='button'
+                    onClick={ !sendTweet }
+                    disabled
+                  >Tweetar</Button>
+                )
+              }
             </div>
           </div>
         </div>
