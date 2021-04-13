@@ -13,8 +13,8 @@ function Login() {
       .then(results => {
         dispatch({
           type: actionTypes.SET_USER,
+          additionalUserInfo: results.additionalUserInfo.profile,
           user: results.user,
-          additionalUserInfo: results.additionalUserInfo,
         });
         // console.log(results);
       })

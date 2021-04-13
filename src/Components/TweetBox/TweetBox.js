@@ -11,7 +11,7 @@ import firebase from 'firebase';
 import { useStateValue } from '../../StateProvider';
 
 function TweetBox() {
-  const [ { user }, dispatch ] = useStateValue();
+  const [ { user, additionalUserInfo }, dispatch ] = useStateValue();
   const [ tweetMessage, setTweetMessage ] = useState('');
   const [ tweetImage, setTweetImage ] = useState('');
   const [ open, setOpen ] = useState(false);
@@ -22,7 +22,7 @@ function TweetBox() {
 
     db.collection('posts').add({
       displayName: user.displayName,
-      username: 'cleverqazi',
+      username: additionalUserInfo.family_name,
       verified: user.emailVerified,
       text: tweetMessage,
       image: tweetImage,
