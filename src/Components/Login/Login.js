@@ -2,13 +2,20 @@ import './Login.css';
 import { AiOutlineTwitter } from "react-icons/ai";
 import { Button } from '@material-ui/core';
 import { auth, provider } from '../../firebase';
+import { actionTypes } from '../../reducer';
+import { useStateValue } from '../../StateProvider';
 
 function Login() {
+  const [ state, dispatch ] = useStateValue();
 
   const signIn = () => {
     auth.signInWithPopup(provider)
       .then(results => {
-        console.log(results)
+        dispatch({
+          type: actionTypes.SET_USER,
+          user: results.user,
+        });
+        // console.log(results);
       })
       .catch((error) => alert(error.message));
   };
