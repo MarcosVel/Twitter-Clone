@@ -18,6 +18,7 @@
 
 .post_body {
   max-width: 506px;
+  width: 100%;
 }
 
 .post_body > img {

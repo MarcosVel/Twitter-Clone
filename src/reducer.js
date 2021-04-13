@@ -12,6 +12,7 @@ const reducer = (state, action) => {
     case actionTypes.SET_USER:
       return {
         ...state,
+        // additionalUserInfo: action.additionalUserInfo,
         user: action.user,
       };
 

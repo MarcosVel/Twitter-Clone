@@ -14,6 +14,7 @@ function Login() {
         dispatch({
           type: actionTypes.SET_USER,
           user: results.user,
+          additionalUserInfo: results.additionalUserInfo,
         });
         // console.log(results);
       })
