@@ -7,13 +7,16 @@
   width: 100%;
   max-width: 251px;
 
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   /* flex: 0.3; */
 }
 
 .sidebar__twitterIcon {
   display: flex;
   align-items: center;
-  margin-left: 10px;
+  margin-left: 10px !important;
   padding: 7px;
   transition: 0.2s;
   border-radius: 50%;
@@ -62,12 +65,9 @@
     align-items: flex-end;
   }
 
-  .sidebar > a:first-child {
-    margin-right: 10px;
-  }
-
-  .sidebar > button {
-    margin: 20px 9px 20px 0!important;
+  .sidebar_nav {
+    display: flex;
+    flex-direction: column;
   }
 
   .sidebar__twitterIcon {

@@ -13,30 +13,34 @@ import { Button } from '@material-ui/core';
 function Sidebar() {
   return (
     <div className="sidebar">
-      {/* Twitter Icon */ }
-      <a href="/" >
-        <AiOutlineTwitter size='35' className='sidebar__twitterIcon' />
-      </a>
+      <div className="sidebar_nav">
+        {/* Twitter Icon */ }
+        <a href="#" >
+          <AiOutlineTwitter size='35' className='sidebar__twitterIcon' />
+        </a>
 
-      {/* SidebarOption */ }
-      <SidebarOption active Icon={ BiHomeCircle } text='Página Inicial' />
-      <SidebarOption Icon={ BiHash } text='Explorar' />
-      <SidebarOption Icon={ IoNotificationsOutline } text='Notificações' />
-      <SidebarOption Icon={ FiMail } text='Mensagens' />
-      <SidebarOption Icon={ BiBookmark } text='Itens salvos' />
-      <SidebarOption Icon={ RiFileList2Line } text='Listas' />
-      <SidebarOption Icon={ BsPerson } text='Perfil' />
-      <SidebarOption Icon={ CgMoreO } text='Mais' />
+        {/* SidebarOption */ }
+        <SidebarOption active Icon={ BiHomeCircle } text='Página Inicial' />
+        <SidebarOption Icon={ BiHash } text='Explorar' />
+        <SidebarOption Icon={ IoNotificationsOutline } text='Notificações' />
+        <SidebarOption Icon={ FiMail } text='Mensagens' />
+        <SidebarOption Icon={ BiBookmark } text='Itens salvos' />
+        <SidebarOption Icon={ RiFileList2Line } text='Listas' />
+        <SidebarOption Icon={ BsPerson } text='Perfil' />
+        <SidebarOption Icon={ CgMoreO } text='Mais' />
 
-      <Button
-        variant='outlined'
-        className='sidebar__tweet'
-        fullWidth
-      >
-        <GiFeather size='25' />
-        <p>Tweetar</p>
-      </Button>
-
+        <Button
+          variant='outlined'
+          className='sidebar__tweet'
+          fullWidth
+        >
+          <GiFeather size='25' />
+          <p>Tweetar</p>
+        </Button>
+      </div>
+      <div>
+        <h2>teste</h2>
+      </div>
     </div>
   )
 }
