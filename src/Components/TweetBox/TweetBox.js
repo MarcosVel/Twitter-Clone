@@ -69,9 +69,12 @@ function TweetBox() {
                 />
               </div>
             </div>
-            <div className='tweetBox_divShowGIF'>
-              <img src={ tweetImage } className='tweetBox_Gif' />
-            </div>
+            {
+              tweetImage != '' &&
+              <div className='tweetBox_divShowGIF'>
+                <img src={ tweetImage } className='tweetBox_Gif' />
+              </div>
+            }
           </section>
         }
       >
@@ -81,7 +84,7 @@ function TweetBox() {
 
   return (
     <div className="tweetBox">
-      <form>
+      <form autocomplete="off">
         <div className="tweetBox_input">
           <Avatar className='post_avatar' src={ user.photoURL } />
           <div className='tweetBox_Body' >
@@ -125,7 +128,7 @@ function TweetBox() {
                 ) : (
                   <Button
                     className="tweetBox_tweetButton disabled"
-                    type='button'
+                    type='submit'
                     onClick={ !sendTweet }
                     disabled
                   >Tweetar</Button>

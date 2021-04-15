@@ -53,6 +53,7 @@
   background-color: var(--background-dark);
   border-radius: 16px;
   outline-style: unset;
+  height: auto;
 }
 
 .tweetBox_divImageInput {
@@ -103,7 +104,7 @@
   display: flex;
   justify-content: center;
   height: auto;
-  
+
 
 }
 
