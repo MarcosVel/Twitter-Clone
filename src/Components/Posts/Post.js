@@ -26,7 +26,7 @@ const Post = forwardRef(({
         <div className='post_body'>
           <div className='post_header'>
             <div className='post_headerText'>
-              <h3>
+              <h3 className='displayName'>
                 { displayName }
               </h3>
               <span className='post_headerSpecial'>

@@ -1,16 +1,37 @@
-import './Sidebar.css';
-import { BiHomeCircle, BiHash, BiBookmark } from "react-icons/bi";
+import { Avatar, Button } from '@material-ui/core';
 import { AiOutlineTwitter } from "react-icons/ai";
-import { IoNotificationsOutline } from "react-icons/io5";
-import { FiMail } from "react-icons/fi";
-import { RiFileList2Line } from "react-icons/ri";
+import { BiBookmark, BiHash, BiHomeCircle } from "react-icons/bi";
 import { BsPerson } from "react-icons/bs";
 import { CgMoreO } from "react-icons/cg";
-import SidebarOption from '../SidebarOption/SidebarOption';
+import { FiMail } from "react-icons/fi";
 import { GiFeather } from 'react-icons/gi';
-import { Button } from '@material-ui/core';
+import { HiOutlineDotsHorizontal } from 'react-icons/hi';
+import { IoNotificationsOutline } from "react-icons/io5";
+import { RiFileList2Line } from "react-icons/ri";
+import { auth } from '../../firebase';
+import { initialState } from '../../reducer';
+import { useStateValue } from '../../StateProvider';
+import SidebarOption from '../SidebarOption/SidebarOption';
+import './Sidebar.css';
 
 function Sidebar() {
+  const [ { user, additionalUserInfo }, dispatch ] = useStateValue();
+
+  const logout = () => async response => {
+    try {
+      await auth.signOut()
+        .then(() => {
+          // console.log('User Logged Out!')
+          dispatch({
+            type: initialState
+          });
+        })
+        .catch((error) => alert(error.message));
+    } catch (err) {
+      console.log('err:', err);
+    }
+  }
+
   return (
     <div className="sidebar">
       <div className="sidebar_nav">
@@ -39,9 +60,18 @@ function Sidebar() {
           <p>Tweetar</p>
         </Button>
       </div>
-      <div>
-        <h2>teste</h2>
+
+      <div className='sidebar_user' onClick={ logout() }>
+        <div className='sidebar_userInfo'>
+          <Avatar className='sidebar_avatar' src={ user.photoURL } />
+          <div className='sidebar_userInfoTexts'>
+            <h3 className='displayName'>{ user.displayName }</h3>
+            <span className='post_headerSpecial'>@{ additionalUserInfo.given_name }</span>
+          </div>
+        </div>
+        <HiOutlineDotsHorizontal size='19' />
       </div>
+
     </div>
   )
 }
