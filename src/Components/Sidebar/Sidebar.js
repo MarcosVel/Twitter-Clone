@@ -32,6 +32,7 @@ function Sidebar() {
         <Button
           variant='outlined'
           className='sidebar__tweet'
+          href='#'
           fullWidth
         >
           <GiFeather size='25' />

@@ -8,9 +8,11 @@ import { RiSearchLine } from 'react-icons/ri';
 function Widgets() {
   return (
     <div className='widgets'>
-      <div className='widgets_input'>
-        <RiSearchLine size='19' color='var(--placeholder-color)' className='widgets_searchIcon' />
-        <input placeholder='Buscar no Twitter' type='text' />
+      <div className='widgets_divInput'>
+        <div className='widgets_input'>
+          <RiSearchLine size='19' color='var(--placeholder-color)' className='widgets_searchIcon' />
+          <input placeholder='Buscar no Twitter' type='text' />
+        </div>
       </div>
 
       <div className='widgets_widgetContainer'>
@@ -18,9 +20,9 @@ function Widgets() {
         <TwitterTweetEmbed
           className='widgets_tweetEmbed'
           tweetId={ '1342965469481992193' }
-          options={{
+          options={ {
             theme: 'dark',
-          }}
+          } }
         />
 
         <TwitterTimelineEmbed
@@ -29,10 +31,10 @@ function Widgets() {
           theme="dark"
           noScrollbar
           lang="pt-br"
-          options={{
+          options={ {
             tweetLimit: 3,
             height: 400,
-          }}
+          } }
         />
       </div>
     </div>
