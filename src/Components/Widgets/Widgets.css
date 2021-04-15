@@ -37,7 +37,7 @@
 
 .widgets_input > svg {
   padding-left: 20px;
-  padding-right: 5px;
+  padding-right: 4px;
 }
 
 .widgets_input > input {
@@ -77,7 +77,7 @@
   background-color: transparent;
   outline-style: unset;
   padding: 0;
-  padding-right: 13px;
+  padding-right: 14px;
 }
 
 .widgets_input:focus-within > svg {
@@ -117,5 +117,12 @@
     max-width: 290px;
     width: 100% !important;
     margin: 0 20px;
+  }
+}
+
+@media (max-width: 1224px) {
+  .widgets {
+    margin-left: 20px;
+    margin-right: 5px;
   }
 }
