@@ -86,6 +86,7 @@ function TweetBox() {
           <Avatar className='post_avatar' src={ user.photoURL } />
           <div className='tweetBox_Body' >
             <input
+              id='tweetBox_inputPost'
               type='text'
               placeholder='O que está acontecendo?'
               value={ tweetMessage }

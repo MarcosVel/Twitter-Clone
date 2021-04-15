@@ -17,19 +17,37 @@ import './Sidebar.css';
 function Sidebar() {
   const [ { user, additionalUserInfo }, dispatch ] = useStateValue();
 
-  const logout = () => async response => {
-    try {
-      await auth.signOut()
-        .then(() => {
-          // console.log('User Logged Out!')
-          dispatch({
-            type: initialState
-          });
-        })
-        .catch((error) => alert(error.message));
-    } catch (err) {
-      console.log('err:', err);
-    }
+  // const logout = () => async response => {
+  //   try {
+  //     await auth.signOut()
+  //       .then(() => {
+  //         // console.log('User Logged Out!')
+  //         dispatch({
+  //           type: initialState
+  //         });
+  //         window.location='/';
+  //       })
+  //       .catch((error) => alert(error.message));
+  //   } catch (err) {
+  //     console.log('err:', err);
+  //   }
+  // }
+
+  const logout = () => response => {
+    auth.signOut()
+      .then(() => {
+        // console.log('User Logged Out!')
+        dispatch({
+          type: initialState
+        });
+        window.location = '/';
+      })
+      .catch((error) => alert(error.message));
+  }
+
+  function focusInput(e) {
+    e.preventDefault();
+    document.getElementById('tweetBox_inputPost').focus()
   }
 
   return (
@@ -55,6 +73,7 @@ function Sidebar() {
           className='sidebar__tweet'
           href='#'
           fullWidth
+          onClick={ focusInput }
         >
           <GiFeather size='25' />
           <p>Tweetar</p>
