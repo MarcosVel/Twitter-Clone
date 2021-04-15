@@ -31,6 +31,8 @@
   overflow-wrap: break-word;
 
   background-color: inherit;
+  transition: .1s;
+  border-bottom-color: var(--lines-dark);
 }
 
 .tweetBox_Body > input::-webkit-input-placeholder {

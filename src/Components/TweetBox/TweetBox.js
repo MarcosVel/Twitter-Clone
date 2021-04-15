@@ -84,7 +84,7 @@ function TweetBox() {
 
   return (
     <div className="tweetBox">
-      <form autocomplete="off">
+      <form autoComplete="off">
         <div className="tweetBox_input">
           <Avatar className='post_avatar' src={ user.photoURL } />
           <div className='tweetBox_Body' >

@@ -9,7 +9,7 @@
   background-color: var(--twitter-dark-hover);
   border-radius: 30px;
   color: var(--twitter-dark); /* --twitter-color */
-  transition: color 100ms ease-out;
+  transition: 0.2s ease-out;
 }
 
 .sidebarOption > svg {

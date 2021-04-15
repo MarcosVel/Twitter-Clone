@@ -18,7 +18,7 @@
   align-items: center;
   margin-left: 10px !important;
   padding: 7px;
-  transition: 0.2s;
+  transition: 0.2s ease-out;
   border-radius: 50%;
 }
 
@@ -64,8 +64,8 @@
 .sidebar_user:hover {
   background-color: var(--twitter-dark-hover);
   border-radius: 9999px;
-  transition: color 100ms ease-out;
   cursor: pointer;
+  transition: 0.2s ease-out;
 }
 
 .sidebar_userInfo {
@@ -83,6 +83,10 @@
   flex-direction: column;
   justify-content: center;
   margin-left: 8px;
+}
+
+.sidebar_userInfoTexts > h3 {
+  max-width: 130px;
 }
 
 /* MEDIA QUERY */
@@ -116,6 +120,19 @@
   }
 
   .sidebar__tweet>span>p {
+    display: none;
+  }
+
+  .sidebar_user {
+    width: auto;
+    padding: 10px;
+  }
+
+  .sidebar_user > svg:last-child {
+    display: none;
+  }
+
+  .sidebar_userInfoTexts {
     display: none;
   }
 }
