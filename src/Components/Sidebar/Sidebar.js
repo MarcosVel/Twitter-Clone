@@ -71,7 +71,7 @@ function Sidebar() {
         <Button
           variant='outlined'
           className='sidebar__tweet'
-          href='#'
+          type='button'
           fullWidth
           onClick={ focusInput }
         >
@@ -80,7 +80,7 @@ function Sidebar() {
         </Button>
       </div>
 
-      <div className='sidebar_user' onClick={ logout() }>
+      <div className='sidebar_user' onClick={ logout() } title='Fazer LogOut'>
         <div className='sidebar_userInfo'>
           <Avatar className='sidebar_avatar' src={ user.photoURL } />
           <div className='sidebar_userInfoTexts'>

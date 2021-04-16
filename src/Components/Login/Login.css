@@ -162,3 +162,10 @@
     max-width: 288px;
   }
 }
+
+@media (max-width: 415px) {
+  .login_btn {
+    max-width: 100%;
+    width: 100%;
+  }
+}
