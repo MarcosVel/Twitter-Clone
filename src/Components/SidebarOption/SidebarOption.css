@@ -39,3 +39,9 @@
     display: none;
   }
 }
+
+@media (max-width: 415px) {
+  .sidebarOption {
+    margin: -2px 6px;
+  }
+}

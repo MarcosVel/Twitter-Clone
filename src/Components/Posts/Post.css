@@ -83,6 +83,15 @@
 
 @media (max-width: 415px) {
   .displayName {
-    max-width: calc(30vw - 15px);
+    /* max-width: calc(30vw - 15px); */
+    max-width: calc(30vw);
+  }
+
+  .post_headerSpecial {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 100px;
+    display: block;
   }
 }
