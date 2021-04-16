@@ -94,4 +94,9 @@
     max-width: 100px;
     display: block;
   }
+
+  .MuiAvatar-root {
+    width: 40px !important;
+    height: 40px !important;
+  }
 }

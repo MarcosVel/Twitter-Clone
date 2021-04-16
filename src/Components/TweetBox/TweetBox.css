@@ -204,3 +204,18 @@
 .tweetBox_divInput > input:-ms-input-placeholder {  
   color: var(--placeholder-color);
 }
+
+@media (max-width: 415px) {
+  #tweetBox_inputPost {
+    font-size: 18px;
+  }
+
+  .tweetBox_Footer {
+    display: block;
+    direction: rtl;
+  }
+
+  .tweetBox_divIcons {
+    display: flex;
+  }
+}
