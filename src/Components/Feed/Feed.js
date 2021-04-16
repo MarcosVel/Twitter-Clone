@@ -42,6 +42,10 @@ function Feed() {
             timestamp={ post.timestamp }
           />
         )) }
+
+        <footer>
+          <p>Muito obrigado por ter acessado <span>❤</span></p>
+        </footer>
       </FlipMove>
 
     </main>
