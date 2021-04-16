@@ -131,6 +131,7 @@
   height: 40px !important;
 
   margin-left: auto !important;
+  transition: 0.13s ease-out !important;
 }
 
 .disabled {
@@ -141,6 +142,7 @@
   background: none;
   border: none;
   outline-style: none;
+  transition: 0.2s ease-out !important;
 }
 
 .tweetBox_btnGif .tweetBox_twitterIcon {
@@ -215,6 +217,8 @@
 
   .tweetBox_divIcons {
     display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
   }
 
   /* MODAL */

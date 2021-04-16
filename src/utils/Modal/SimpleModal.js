@@ -7,6 +7,7 @@ const useStyles = makeStyles(() => ({
     margin: 'auto',
     justifyContent: 'center',
     alignItems: 'center',
+    backgroundColor: 'rgba(0, 0, 0, 0.3)'
     // height: '10%'
   }
 }));

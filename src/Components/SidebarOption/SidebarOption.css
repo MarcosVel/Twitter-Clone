@@ -3,6 +3,8 @@
   align-items: center;
   cursor: pointer;
   margin: 6px 7px;
+  border-radius: 30px;
+  transition: 0.2s ease-out;
 }
 
 .sidebarOption:hover {
