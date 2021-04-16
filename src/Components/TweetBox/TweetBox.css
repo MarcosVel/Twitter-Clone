@@ -106,8 +106,6 @@
   display: flex;
   justify-content: center;
   height: auto;
-
-
 }
 
 .tweetBox_Gif {
@@ -218,4 +216,30 @@
   .tweetBox_divIcons {
     display: flex;
   }
+
+  /* MODAL */
+  .tweetBox_divModal {
+    max-width: 90vw;
+  }
+
+  .tweetBox_divImageInput {
+    width: auto;
+    padding: 0 12px;
+  }
+
+  .tweetBox_divInput > svg {
+    margin-left: 14px;
+    margin-right: 8px;
+  }
+
+  .tweetBox_divInput > input {
+    padding: 0;
+    padding-right: 15px;
+  }
+
+  /* IMG MODAL */
+  .tweetBox_Gif {
+    max-width: 83vw;
+  }
+
 }
