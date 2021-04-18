@@ -56,7 +56,7 @@ function TweetBox() {
           <section className="tweetBox_divModal">
             <div className='tweetBox_divImageInput'>
               <IconButton aria-label='Close' onClick={ () => handleCloseModal() }>
-                <CgClose size='22' />
+                <CgClose size='22' title='Fechar' />
               </IconButton>
               <div className='tweetBox_divInput'>
                 <RiSearchLine size='20' color='var(--placeholder-color)' aria-label='Colar um GIF' />
@@ -102,6 +102,7 @@ function TweetBox() {
                 </a>
                 <button
                   type='button'
+                  title='GIF/Img'
                   className='tweetBox_btnGif'
                   aria-label='Adicionar um GIF'
                   onClick={ handleOpenModal }

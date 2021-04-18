@@ -13,11 +13,11 @@ function Feed() {
     db.collection('posts')
       .orderBy('timestamp', 'desc')
       .onSnapshot(snapshot => {
-      setPosts(snapshot.docs.map(doc => ({
-        id: doc.id,
-        post: doc.data(),
-      })));
-    })
+        setPosts(snapshot.docs.map(doc => ({
+          id: doc.id,
+          post: doc.data(),
+        })));
+      })
   }, []);
 
   return (
@@ -35,6 +35,7 @@ function Feed() {
         { posts.map(({ id, post }) => (
           <Post
             key={ id }
+            postId={ id }
             displayName={ post.displayName }
             username={ post.username }
             verified={ post.verified }

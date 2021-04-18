@@ -58,6 +58,7 @@
   font-weight: 400;
   font-size: 15px;
   color: var(--placeholder-color);
+  margin-top: 2px;
 }
 
 .post_badge {
@@ -81,11 +82,11 @@
 
 
 /* COMENTS */
-.post_comment {
+/* .post_comment {
   display: flex;
   padding: 12px 16px;
 
-}
+} */
 
 @media (max-width: 415px) {
   .displayName {

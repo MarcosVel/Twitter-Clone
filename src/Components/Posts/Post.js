@@ -5,9 +5,12 @@ import { FaRegComment } from 'react-icons/fa';
 import { BiRepost } from 'react-icons/bi';
 import { IoIosHeartEmpty } from 'react-icons/io';
 import { FiShare } from 'react-icons/fi';
-import { forwardRef } from 'react';
+import { forwardRef, useEffect, useState } from 'react';
+import Comment from '../Comments/Comment';
+import db from '../../firebase';
 
 const Post = forwardRef(({
+  postId,
   displayName,
   username,
   timestamp,
@@ -16,6 +19,25 @@ const Post = forwardRef(({
   image,
   avatar
 }, ref) => {
+
+  const [ comments, setComments ] = useState([]);
+  // const [ comment, setComment ] = useState('');
+
+  useEffect(() => {
+    if (postId) {
+      db.collection('posts')
+        .doc(postId)
+        .collection('comments')
+        .orderBy('timestamp', 'asc')
+        .onSnapshot((snapshot) => {
+          setComments(snapshot.docs.map((doc) => ({
+            id: doc.id,
+            comment: doc.data(),
+          })));
+        });
+    }
+
+  }, [ postId ]);
 
   return (
     <>
@@ -49,6 +71,20 @@ const Post = forwardRef(({
         </div>
       </section>
 
+      {
+        comments.map(({ id, comment }) => (
+          <Comment
+            key={ id }
+            // commentId={ id }
+            displayName={ comment.displayName }
+            username={ comment.username }
+            verified={ comment.verified }
+            txtComment={ comment.txtComment }
+            avatar={ comment.avatar }
+            timestamp={ comment.timestamp }
+          />
+        ))
+      }
       {/* <section className='post_comment'>
         <div className='post_avatar'>
           <Avatar src={ avatar } />
