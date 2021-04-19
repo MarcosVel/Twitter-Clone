@@ -2,7 +2,7 @@
   display: flex;
   align-items: flex-start;
   border-bottom: 1px solid var(--lines-dark);
-  padding: 12px 16px;
+  padding: 12px 16px 1px;
   /* width: 100%; */
   max-width: 598px;
 
@@ -81,17 +81,27 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-top: 12px;
+  margin-top: 5px;
   max-width: 425px;
 }
 
 
-/* COMENTS */
-/* .post_comment {
-  display: flex;
-  padding: 12px 16px;
-
-} */
+/* ACTIONS */
+.post_action {
+  padding: 8px;
+  border-radius: 50%;
+  transition: 0.2s;
+  cursor: pointer;
+  color: var(--placeholder-color);
+}
+#post_repost:hover {
+  color: rgb(23, 191, 99);
+  background-color: rgba(23, 191, 99, 0.1);
+}
+#post_like:hover {
+  color: rgb(224, 36, 94);
+  background-color: rgba(224, 36, 94, 0.1);
+}
 
 @media (max-width: 415px) {
   .displayName {

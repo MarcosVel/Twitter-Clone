@@ -1,0 +1,12 @@
+.commentActions:hover {
+  color: var(--twitter-dark) !important;
+  background-color: var(--twitter-dark-hover);
+}
+
+.commentActions {
+  padding: 9px;
+  border-radius: 50%;
+  transition: 0.2s;
+  cursor: pointer;
+  color: var(--placeholder-color);
+}

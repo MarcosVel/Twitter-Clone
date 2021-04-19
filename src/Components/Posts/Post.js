@@ -8,6 +8,7 @@ import { FiShare } from 'react-icons/fi';
 import { forwardRef, useEffect, useState } from 'react';
 import Comment from '../Comments/Comment';
 import db from '../../firebase';
+import CommentModal from '../CommentModal/CommentModal';
 
 const Post = forwardRef(({
   postId,
@@ -63,10 +64,11 @@ const Post = forwardRef(({
             <img src={ image } alt='Imagem de um tweet' />
           ) }
           <div className='post_footer'>
-            <FaRegComment size='17' />
-            <BiRepost size='23' />
-            <IoIosHeartEmpty size='20' />
-            <FiShare size='17' />
+            {/* <FaRegComment size='17' /> */}
+            <CommentModal />
+            <BiRepost size='22' className='post_action' id='post_repost' />
+            <IoIosHeartEmpty size='20' className='post_action' id='post_like' />
+            <FiShare size='17' className='commentActions' />
           </div>
         </div>
       </section>
