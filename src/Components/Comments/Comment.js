@@ -5,6 +5,7 @@ import './Comment.css';
 
 const Comment = forwardRef(({
   // commentId,
+  userPost,
   displayName,
   username,
   timestamp,
@@ -28,7 +29,7 @@ const Comment = forwardRef(({
           </span>
         </div>
         <div className='post_headerDescription'>
-          <span className='post_headerSpecial'>Em resposta a</span>
+          <span className='post_headerSpecial'>Em resposta a&nbsp;<span className='userPost'>@{ userPost }</span></span>
           <p>{ txtComment }</p>
         </div>
       </div>

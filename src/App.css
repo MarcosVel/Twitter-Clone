@@ -11,8 +11,9 @@ body {
   --widgets-background: #192734;
   --widgets-input-background: #253341;
 
-  /* PLACEHOLDER */
+  /* LETRAS */
   --placeholder-color: #8899A6;
+  --linkUser: #1b95e0;
 
   background-color: var(--background-dark);
   color: white;

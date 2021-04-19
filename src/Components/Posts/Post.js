@@ -76,6 +76,7 @@ const Post = forwardRef(({
           <Comment
             key={ id }
             // commentId={ id }
+            userPost={ displayName }
             displayName={ comment.displayName }
             username={ comment.username }
             verified={ comment.verified }
