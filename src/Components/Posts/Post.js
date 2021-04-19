@@ -86,24 +86,6 @@ const Post = forwardRef(({
           />
         ))
       }
-      {/* <section className='post_comment'>
-        <div className='post_avatar'>
-          <Avatar src={ avatar } />
-        </div>
-        <div className='post_body'>
-          <div className='post_headerText'>
-            <h3>
-              { displayName }
-            </h3>
-            <span className='post_headerSpecial'>
-              { verified && <GoVerified className='post_badge' /> }@{ username } · { new Date(timestamp?.toDate()).toDateString() }
-            </span>
-          </div>
-          <h2>
-            Teste
-          </h2>
-        </div>
-      </section> */}
     </>
   );
 });
